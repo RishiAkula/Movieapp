@@ -1,17 +1,36 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Login from './Login';
+import Home from './home';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import Axiosdemo from './axiosdemo';
+// Import only necessary Bootstrap styles
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ActionPage from './ActionPage';
+import Comedy from   './Comedy';
+import Drama  from  './Drama'; 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function Website(){
+  return(
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Login/>}></Route>
+        <Route path='/home' element={<Home/>} />
+        <Route path='/axiosdemo' element={<Axiosdemo/>} />
+        <Route path='/actionpage' element={<ActionPage/>} />
+        <Route path='/comedy' element={<Comedy/>} />
+        <Route path='/drama' element={<Drama/>} />
+      </Routes>
+    </BrowserRouter>
+
+    // <div className='full-height'>
+    //   <Home/>
+    //   <Login/>
+    // </div>
+  );
+}
+
+ReactDOM.render(<Website/>, document.getElementById('root'));
+

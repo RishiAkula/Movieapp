@@ -1,13 +1,111 @@
-body {
+/* Global Styles */
+html, body {
+  width: 100%;
+  height: 100%;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9pt;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.full-height {
+  width: 100%;
+  height: 100%;
+}
+
+:focus {
+  outline: none;
+}
+
+/* Login Page Styles */
+.loginheader {
+  background: rgb(116, 158, 165);
+  height: 30px;
+  color: rgb(230, 234, 133);
+  line-height: 30px;
+  font-weight: bold;
+  font-size: 12pt;
+}
+
+.logincontent {
+  background-image: url('./images/photo/loginbg.jpg');
+  height: 100vh;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+
+.loginfooter {
+  margin-top: auto;
+  background: rgb(202, 247, 247);
+  height: 30px;
+  color: white;
+  line-height: 30px;
+  font-size: 7pt;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.popup {
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 16, 1, 0.5);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999; /* Ensure the popup is above other content */
+}
+
+.popupwindow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for the popup */
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.loginstyle1 {
+  height: 30px;
+  line-height: 30px;
+  font-size: 18pt; /* Increased font size for better visibility */
+  font-weight: bold;
+  color: #333; /* Dark color for better readability */
+}
+
+.loginstyle2 {
+  position: relative;
+  height: 400px;
+  padding: 20px;
+  background: rgba(176, 218, 232, 0.8); /* Semi-transparent background for the login content */
+  border-radius: 5px;
+  overflow: auto; /* Add overflow for better content scrolling if needed */
+}
+
+.txtbox {
+  width: 100%;
+  height: 40px; /* Slightly increased height for better input visibility */
+  font-size: 12pt; /* Increased font size for better readability */
+  border: 1px solid #ccc; /* Lighter border color for better aesthetics */
+  border-radius: 3px;
+  margin-bottom: 10px; /* Added margin for better spacing between input fields */
+}
+
+.btn {
+  width: 100%;
+  height: 40px; /* Increased height for better button visibility */
+  background: rgb(175, 25, 25);
+  color: white;
+  border: 1px solid #ccc; /* Lighter border color for better aesthetics */
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.linklabel {
+  color: dodgerblue;
+  cursor: pointer;
 }

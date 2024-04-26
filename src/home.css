@@ -1,0 +1,84 @@
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Header styles */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #333;
+    padding: 10px 20px;
+  }
+  
+  .header-title {
+    font-size: 24px;
+    color: #fff;
+  }
+  
+  .header-buttons {
+    display: flex;
+  }
+  
+  .header-buttons button {
+    margin-left: 10px;
+  }
+  
+  /* Movie posters container styles */
+  .movie-posters-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .movie-posters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Align posters in the center */
+    margin-bottom: -20px; /* Negative margin to remove space between rows */
+  }
+  
+  
+  .movie-poster {
+    width: calc(20% - 20px); /* Adjust width to fit 5 posters per row */
+    margin-bottom: 20px;
+    text-align: center;
+    overflow: hidden; /* Clip image overflow */
+  }
+  
+  .movie-poster img {
+    width: 1%; /* Set the width to fill the container */
+    max-width: 10px; /* Set the maximum width of the posters */
+    height: 1px; /* Maintain aspect ratio */
+    object-fit: cover; /* Ensure the poster covers the container */
+    border-radius: 10px;
+    transition: transform 0.3s ease; /* Add transition for smooth hover effect */
+  }
+  
+  
+  /* Hover effect on movie poster */
+  .movie-poster:hover img {
+    transform: scale(1.1); /* Enlarge image slightly on hover */
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .movie-poster {
+      width: calc(33.333% - 20px);
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .movie-poster {
+      width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 350px) {
+    .movie-poster {
+      width: 100%;
+    }
+  }
+  

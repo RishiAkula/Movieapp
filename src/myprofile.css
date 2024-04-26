@@ -1,0 +1,53 @@
+body {
+    background-image: url('./images/photo/7.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+.home .tablestyle,
+.home .tablestyle .firstcolumn {
+    background: none; /* Override the background for elements inside the "home" class */
+}
+
+.cpcontent {
+    width: 450px;
+    height: 250px;
+    border: 1px solid silver;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding-top: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.imgstyle {
+    width: 85px;
+    height: 100px;
+    background: none; /* Remove background for the profile picture */
+}
+
+.profile-section {
+    color: #333; /* Set a dark color for better visibility, you can adjust the hex code as needed */
+    padding: 20px; /* Add padding for better spacing */
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 300px;
+}
+
+.button {
+    height: 30px;
+    background: dodgerblue;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.button:hover {
+    background: blue;
+}
