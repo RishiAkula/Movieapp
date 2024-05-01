@@ -1,10 +1,9 @@
 const express = require('express');
 const cors = require('cors');
-const {MongoClient} = require('mongodb');
+const { MongoClient } = require('mongodb');
 const fileupload = require('express-fileupload');
 const nodemailer = require('nodemailer');
-import 'bootstrap/dist/css/bootstrap.min.css';
-
+/*require('bootstrap/dist/css/bootstrap.min.css'); // Use require() instead of import*/
 
 const app = express();
 app.use(express.json());
@@ -13,12 +12,11 @@ app.use(fileupload());
 
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, console.log(`Server running on the port number ${PORT}`));
+app.listen(PORT, console.log(`Server running on port number ${PORT}`));
 
-//Configuration (MONGODB)
+// Configuration (MONGODB)
 var curl = "mongodb+srv://Rishi:Rishi@cluster0.wpgo2gc.mongodb.net/";
-var client = new MongoClient(curl); 
-
+var client = new MongoClient(curl);
 //TESTING
 app.get('/klef/test', async function(req, res){
     //res.send("Koneru Lakshmaiah Education Foundation");
@@ -79,7 +77,7 @@ app.post('/home/uname', async function(req, res){
 });
 
 app.post('/home/menu', async function(req, res){
-    try
+    try 
     {
         conn = await client.connect();
         db = conn.db('SDP');
