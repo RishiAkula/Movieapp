@@ -106,7 +106,7 @@ app.post('/home/menus', async function(req, res){
     }
 });
 
-//CHANGE PASSWORD
+/*//CHANGE PASSWORD
 app.post('/cp/updatepwd', async function(req, res){
     try
     {
@@ -194,4 +194,4 @@ app.post('/sendemail', async function(req, res){
     {
         res.json(err).status(404);
     }
-});
+});*/

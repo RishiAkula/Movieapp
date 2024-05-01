@@ -4,7 +4,7 @@ import './home.css';
 
 function ActionPage() {
   const [movies, setMovies] = useState([]);
-  const [error, setError] = useState(null);
+  const [ setError] = useState(null);
 
   useEffect(() => {
     async function fetchMovies() {

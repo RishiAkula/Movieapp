@@ -5,7 +5,7 @@ import './home.css';
 
 function ComedyPage() {
   const [movies, setMovies] = useState([]);
-  const [error, setError] = useState(null);
+  const [ setError] = useState(null);
 
   useEffect(() => {
     async function fetchMovies() {
