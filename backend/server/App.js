@@ -3,6 +3,8 @@ const cors = require('cors');
 const {MongoClient} = require('mongodb');
 const fileupload = require('express-fileupload');
 const nodemailer = require('nodemailer');
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const app = express();
 app.use(express.json());
