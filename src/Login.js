@@ -27,19 +27,23 @@ function Login(){
         callApi("POST", url, data, loginSuccess, errorResponse);
     }
 
-    function loginSuccess(res)
-    {
-        var data = JSON.parse(res);
-        if(data === 1)
-        {
-            var T1=document.getElementById('T1');
-            setSession("sid", T1.value, 0.5);
-            window.location.replace("/home");
-        }
-        else
-            alert("Invalid Credentials!");
+    // Inside the loginSuccess function in Login.js
+function loginSuccess(res) {
+    var data = JSON.parse(res);
+    if (data === 1) {
+      var T1 = document.getElementById('T1');
+      setSession("sid", T1.value, 0.5);
+  
+      // Store user information in session storage
+      const user = { name: T1.value }; // Adjust as per your user data structure
+      sessionStorage.setItem("loggedInUser", JSON.stringify(user));
+  
+      window.location.replace("/home");
+    } else {
+      alert("Invalid Credentials!");
     }
-
+  }
+  
     function registration(){
         var T1 = document.getElementById('T1');
         var T2 = document.getElementById('T2');

@@ -1,0 +1,28 @@
+.movie-card {
+    width: 250px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .movie-card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .movie-info {
+    padding: 16px;
+  }
+  
+  .movie-info h3 {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .movie-info p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #666;
+  }
+  

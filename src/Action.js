@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import './home.css';
 
 function ActionPage() {
   const [movies, setMovies] = useState([]);
@@ -8,7 +9,7 @@ function ActionPage() {
   useEffect(() => {
     async function fetchMovies() {
       try {
-        const response = await axios.get("https://api.themoviedb.org/3/tv/popular", {
+        const response = await axios.get("https://api.themoviedb.org/3/discover/movie", {
           params: {
             api_key: "e822ff863a27d31828a5905f75f90a2f", // Replace with your actual API key
             sort_by: "popularity.desc",
@@ -26,21 +27,16 @@ function ActionPage() {
 
   return (
     <div className="home-container">
-      <header className="header">
-        <h1 className="header-title">Actions Movies</h1>
-      </header>
       <main>
-        <h2>Trending Movies</h2>
+        <h2>Action Movies</h2>
         <div className="movie-posters-container">
-          <div className="movie-posters">
-            {movies.map((movie) => (
-              <div key={movie.id} className="movie-poster">
-                <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
-                <h3>{movie.title}</h3>
-                <p>{movie.release_date}</p>
-              </div>
-            ))}
-          </div>
+          {movies.map((movie) => (
+            <div key={movie.id} className="movie-poster">
+              <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt={movie.title} />
+              <h3>{movie.title}</h3>
+              <p>{movie.release_date}</p>
+            </div>
+          ))}
         </div>
       </main>
     </div>

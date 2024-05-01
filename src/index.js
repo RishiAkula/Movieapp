@@ -7,7 +7,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Axiosdemo from './axiosdemo';
 // Import only necessary Bootstrap styles
 import 'bootstrap/dist/css/bootstrap.min.css';
-import ActionPage from './ActionPage';
+import Action from './Action';
 import Comedy from   './Comedy';
 import Drama  from  './Drama'; 
 
@@ -19,7 +19,7 @@ function Website(){
         <Route path="/" element={<Login/>}></Route>
         <Route path='/home' element={<Home/>} />
         <Route path='/axiosdemo' element={<Axiosdemo/>} />
-        <Route path='/actionpage' element={<ActionPage/>} />
+        <Route path='/action' element={<Action/>} />
         <Route path='/comedy' element={<Comedy/>} />
         <Route path='/drama' element={<Drama/>} />
       </Routes>

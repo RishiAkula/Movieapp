@@ -1,84 +1,72 @@
-.home-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  /* Header styles */
-  .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    background-color: #333;
-    padding: 10px 20px;
-  }
-  
-  .header-title {
-    font-size: 24px;
-    color: #fff;
-  }
-  
-  .header-buttons {
-    display: flex;
-  }
-  
-  .header-buttons button {
-    margin-left: 10px;
-  }
-  
-  /* Movie posters container styles */
-  .movie-posters-container {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .movie-posters {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Align posters in the center */
-    margin-bottom: -20px; /* Negative margin to remove space between rows */
-  }
-  
-  
+/* home.css */
+/* Styles for header */
+.header {
+  background-color: #333; /* Dark background color for the header */
+  padding: 20px 0; /* Add vertical padding */
+  text-align: center;
+}
+
+.header-title {
+  margin-bottom: 10px; /* Add space below the title */
+  color: #fff; /* White text color for the title */
+  font-size: 32px; /* Increase font size */
+}
+
+.header-nav ul {
+  list-style: none; /* Remove default list styles */
+  padding: 0; /* Remove default padding */
+}
+
+.header-nav li {
+  display: inline-block; /* Display navigation links horizontally */
+  margin-right: 20px; /* Add space between navigation links */
+}
+
+.header-nav li:last-child {
+  margin-right: 0; /* Remove margin from the last navigation link */
+}
+
+.header-nav a {
+  color: #fff; /* White text color for navigation links */
+  text-decoration: none; /* Remove underline */
+  font-size: 18px; /* Font size for navigation links */
+  transition: color 0.3s; /* Add transition for smooth color change */
+}
+
+.header-nav a:hover {
+  color: #ff6b6b; /* Change text color on hover */
+}
+
+/* Styles for movie posters */
+.home-container main {
+  padding: 20px; /* Add padding to main content */
+}
+
+.movie-posters-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.movie-poster {
+  width: calc(20% - 20px); /* Adjust width to fit 5 posters per row */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.movie-poster img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease; /* Add transition for smooth scaling */
+}
+
+.movie-poster img:hover {
+  transform: scale(1.05); /* Zoom in the poster on hover */
+}
+
+@media screen and (max-width: 768px) {
   .movie-poster {
-    width: calc(20% - 20px); /* Adjust width to fit 5 posters per row */
-    margin-bottom: 20px;
-    text-align: center;
-    overflow: hidden; /* Clip image overflow */
+    width: calc(33.33% - 20px); /* Adjust width for smaller screens */
   }
-  
-  .movie-poster img {
-    width: 1%; /* Set the width to fill the container */
-    max-width: 10px; /* Set the maximum width of the posters */
-    height: 1px; /* Maintain aspect ratio */
-    object-fit: cover; /* Ensure the poster covers the container */
-    border-radius: 10px;
-    transition: transform 0.3s ease; /* Add transition for smooth hover effect */
-  }
-  
-  
-  /* Hover effect on movie poster */
-  .movie-poster:hover img {
-    transform: scale(1.1); /* Enlarge image slightly on hover */
-  }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .movie-poster {
-      width: calc(33.333% - 20px);
-    }
-  }
-  
-  @media (max-width: 500px) {
-    .movie-poster {
-      width: calc(50% - 20px);
-    }
-  }
-  
-  @media (max-width: 350px) {
-    .movie-poster {
-      width: 100%;
-    }
-  }
-  
+}
